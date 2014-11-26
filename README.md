@@ -35,7 +35,9 @@ After setup you can use web requests to perform Saltstack actions.
 
 **Restarting nginx:**
 
-    # curl -H "Accept: application/json" -d tgt='*' -d service="nginx" -d secretkey="replacethiswithsomethingbetter" -k https://10.0.0.2:8080/hook/services/restart
+    # curl -H "Accept: application/json" -d tgt='*' -d service="nginx" \
+    -d secretkey="replacethiswithsomethingbetter" \
+    -k https://10.0.0.2:8080/hook/services/restart
     {"success": true}
 
 
