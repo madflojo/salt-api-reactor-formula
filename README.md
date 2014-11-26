@@ -17,7 +17,7 @@ Once you put this file into `/etc/salt/master.d` directory you must restart the 
 
 ## Reactor.conf
 
-The `reactor.conf` file is designed to be placed into the `/etc/salt/master.d` directory. This file contains all of the CloudRoutes based reactor configurations and sample url even tags to listen for. You may need to modify this file for your environment.
+The `reactor.conf` file is designed to be placed into the `/etc/salt/master.d` directory. This file contains all of the Runbook based reactor configurations and sample url even tags to listen for. You may need to modify this file for your environment.
 
 Once this file is in place you will need to restart the `salt-master` service for these reactions to take effect.
 
