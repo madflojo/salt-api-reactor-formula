@@ -24,3 +24,7 @@ Once this file is in place you will need to restart the `salt-master` service fo
 ## reactor/
 
 This directory and sub directory contains reactor `SLS` files to utilize with [Runbook.io](https://runbook.io). While these files are designed for a specific usage they can also be used as a template for general salt-api configurations and usage.
+
+All of the reactor `SLS` files contain an API key used to authenticate requests. These keys should be changed in any implementation, below is the string to look for.
+
+    {% if postdata.secretkey == "PICKSOMETHINGBETTERPLZKTHX" %}
