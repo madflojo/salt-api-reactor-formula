@@ -15,7 +15,6 @@ While everything included is designed to work with Runbook, all of the configura
 
 Before utilizing this formula you will first need to [setup salt-api](http://bencane.com/2014/07/17/integrating-saltstack-with-other-services-via-salt-api/) after salt-api is installed and configured you can simply copy a few files in place.
 
-    # cp salt-api.conf /etc/salt/master.d
     # cp reactor.conf /etc/salt/master.d
     # cp -R reactor /srv/salt/
     # service salt-master restart
