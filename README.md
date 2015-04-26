@@ -3,7 +3,7 @@ Salt-API and Reactor Formula
 
 ## Purpose
 
-The purpose of this formula is to allow you to call Saltstack via simple HTTP webhooks. You can use this formula for complicated setups like integrating your own application into Saltstack or for simple day to day tasks like having a provisioning script send a webhook to accept a new minion key. 
+The purpose of this formula is to allow you to call Saltstack via simple HTTP webhooks. You can use this formula for complicated setups like integrating your own application into Saltstack or for simple day to day tasks like having a provisioning script send a webhook to accept a new minion key.
 
 ### A bit of background
 
@@ -27,6 +27,11 @@ This system uses a specific key for authenticating requests, the key is defined 
 **Replace this with something better:**
 
     {% if postdata.secretkey == "PICKSOMETHINGBETTERPLZKTHX" %}
+
+Note that even though the reactor files are in `/srv/salt/reactor/`, they [aren’t run in the same fashion as a state](http://salt-api.readthedocs.org/en/latest/ref/netapis/all/saltapi.netapi.rest_cherrypy.html#saltapi.netapi.rest_cherrypy.app.Webhook) file would be.
+In other words, you can’t expect to have access to pillar or grains from there.
+If you want to make your reactor file to use a secret key that you store in pillars, you’d have to make the reactor files as `file.managed` with `template: ...`, and make it generate it for you with the appropriate key, at the place where your master configuration at `reactor:` would expect them.
+
 
 ## Usage
 

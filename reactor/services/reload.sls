@@ -8,6 +8,6 @@ services_reload:
     - expr_form: {{ postdata.matcher }}
     {% endif %}
     - arg:
-      - {{ postdata.args }}
+      - {{ postdata.service }}
 {% endif %}
-  
+
