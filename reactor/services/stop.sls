@@ -8,6 +8,6 @@ services_stop:
     - expr_form: {{ postdata.matcher }}
     {% endif %}
     - arg:
-      - {{ postdata.service }}
+      - {{ postdata.args }}
 {% endif %}
 

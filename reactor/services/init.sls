@@ -8,6 +8,6 @@ service_init:
     - expr_form: {{ postdata.matcher }}
     {% endif %}
     - arg:
-      - {{ postdata.service }}
+      - {{ postdata.args }}
 {% endif %}
 
