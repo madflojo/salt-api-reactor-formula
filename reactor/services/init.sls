@@ -10,4 +10,4 @@ service_init:
     - arg:
       - {{ postdata.args }}
 {% endif %}
-  
+
